@@ -1,18 +1,8 @@
 import java.util.*;
 class Main {
+
     
-    // static int add2matrix(int [][]M1 , int [][]M2){
-    //     int r=M1.length;
-    //     int c=M1[0].length;
-    //     int [][]M3=new int[r][c]; 
-    //     for(int i=0;i<r;i++){
-    //         for(int j=0;j<c;j++){
-    //             M3[i][j]=M1[i][j]+M2[i][j];
-    //         }
-           
-    //     }
-    //      return M3;
-    // }
+    //Transpose Of a matrix//
    static int[][] findtrans(int[][] M){
          int R=M.length;
         int C=M[0].length;
@@ -24,6 +14,8 @@ class Main {
         }
         return Tmat;
    }
+   
+   //2D matrix column wise sum//
     static void printcsum(int [][] M){
         int r=M.length;
         int c=M[0].length;
@@ -36,6 +28,7 @@ class Main {
         }
     }
     
+     //2D matrix row wise sum//
     static void printRsum(int [][]M)
     {
          int r=M.length;
@@ -49,6 +42,8 @@ class Main {
         }
          System.out.println(" ");
     }
+    
+   //Printing of a 2D matrix//
     static void print2d(int[][] M)
     
     {
@@ -63,6 +58,8 @@ class Main {
         }
     }
     
+    //Declaration and initialization of a 2D matrix//
+
     public static void main(String args[]) {
     Scanner sc = new Scanner(System.in);
     int r = sc.nextInt();
@@ -73,11 +70,14 @@ class Main {
             mat[i][j] = sc.nextInt();
         }
     }
+    //calling functions//
+    
     print2d(mat);
     printRsum(mat);
     printcsum(mat);
 
     // Transpose the matrix
+    
     int[][] Tmat1 = findtrans(mat);
     // Print the transposed matrix
     print2d(Tmat1);
